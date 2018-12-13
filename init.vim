@@ -1,5 +1,5 @@
-let g:python_host_prog = '/Users/yasu/nvim-env/bin/python'
-let g:python3_host_prog = '/Users/yasu/nvim-env/bin/python3'
+let g:python_host_prog=$PYENV_ROOT.'/versions/nvim_env2/bin/python'
+let g:python3_host_prog=$PYENV_ROOT.'/versions/nvim_env3/bin/python'
 
 " プラグインが実際にインストールされるディレクトリ
 let s:dein_dir = expand('~/.cache/dein')
@@ -370,9 +370,9 @@ function! VisualSelection(direction, extra_filter) range
     let @" = l:saved_reg
 endfunction
 
+inoremap <silent> fd <ESC>
+vnoremap <silent> fd <ESC>
 
-map <leader>nn :NERDTreeToggle<cr>
-map <leader>nb :NERDTreeFromBookmark<Space>
-map <leader>nf :NERDTreeFind<cr>
+nnoremap <leader>qq :q<cr>
 
-inoremap <silent> jj <ESC>
+nnoremap <leader>gs :Gstatus<cr>

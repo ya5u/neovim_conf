@@ -28,7 +28,7 @@ call denite#custom#var('grep', 'recursive_opts', [])
 [[plugins]]
 repo = "Shougo/defx.nvim"
 hook_add = '''
-nmap <Space>nn :Defx `expand('%:p:h')` -search=`expand('%:p')`<CR>
+nmap <silent><Space>nn :Defx `expand('%:p:h')` -search=`expand('%:p')`<CR>
 
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
@@ -64,6 +64,7 @@ endfunction
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+on_cmd = 'Gstatus'
 
 [[plugins]]
 repo = 'Shougo/neomru.vim'
@@ -84,15 +85,6 @@ repo = 'Vimjas/vim-python-pep8-indent'
 on_ft = 'python'
 
 [[plugins]]
-repo = 'fatih/vim-go'
-on_ft = 'go'
-hook_source = '''
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-'''
-
-[[plugins]]
 repo = 'zchee/deoplete-go'
 build = 'make'
 on_ft = 'go'
@@ -101,6 +93,10 @@ hook_source = '''
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 '''
+
+[[plugins]]
+repo = 'posva/vim-vue'
+on_ft = 'vue'
 
 [[plugins]]
 repo = 'mhartington/nvim-typescript'

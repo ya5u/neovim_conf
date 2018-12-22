@@ -204,9 +204,13 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+map <C-s> <C-W>s
+map <C-v> <C-W>v
+map <C-q> <C-W>q
 
 " Close the current buffer
-map <leader>bd :Bclose<cr>:tabclose<cr>gT
+"map <leader>bd :Bclose<cr>:tabclose<cr>gT
+map <leader>bd :bd<cr>
 
 " Close all the buffers
 map <leader>ba :bufdo bd<cr>
@@ -308,7 +312,7 @@ map <leader>s? z=
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Quickly open a buffer for scribble
-map <leader>q :e ~/buffer<cr>
+"map <leader>q :e ~/buffer<cr>
 
 " Quickly open a markdown buffer for scribble
 map <leader>x :e ~/buffer.md<cr>
@@ -372,7 +376,9 @@ endfunction
 
 inoremap <silent> fd <ESC>
 vnoremap <silent> fd <ESC>
+tnoremap <silent> fd <C-\><C-n>
 
-nnoremap <leader>qq :q<cr>
+nnoremap <leader>q :q<cr>
 
 nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>t :Tnew<cr>

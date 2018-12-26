@@ -15,6 +15,7 @@ build = 'bash install.sh'
 hook_add = '''
 set hidden
 let g:LanguageClient_serverCommands = {
+    \ 'go': ['golsp'],
     \ 'vue': ['vls'],
     \ }
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>

@@ -1,6 +1,6 @@
 [[plugins]]
 repo = 'Shougo/denite.nvim'
-depends = ['neomru.vim']
+depends = ['neomru.vim', 'neoyank.vim']
 on_event = 'BufRead'
 hook_add = '''
 nmap <silent> <C-u><C-t> :<C-u>Denite filetype<CR>
@@ -69,23 +69,8 @@ endfunction
 '''
 
 [[plugins]]
-repo = 'tpope/vim-fugitive'
-on_cmd = 'Gstatus'
-
-[[plugins]]
-repo = 'kassio/neoterm'
-on_cmd = 'Tnew'
-hook_add = '''
-let g:neoterm_autoinsert = 1
-let g:neoterm_default_mod = 'botright'
-'''
-
-[[plugins]]
-repo = 'airblade/vim-rooter'
-on_event = 'BufRead'
-hook_add = '''
-let g:rooter_change_directory_for_non_project_files = 'home'
-'''
+repo = 'pangloss/vim-javascript'
+on_ft = 'javascript'
 
 [[plugins]]
 repo = 'zchee/deoplete-jedi'
@@ -110,6 +95,14 @@ let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const
 '''
 
 [[plugins]]
+repo = 'fatih/vim-go'
+on_ft = 'go'
+
+[[plugins]]
+repo = 'buoto/gotests-vim'
+on_ft = 'go'
+
+[[plugins]]
 repo = 'posva/vim-vue'
 on_ft = 'vue'
 
@@ -123,12 +116,28 @@ let g:nvim_typescript#javascript_support = 1
 '''
 
 [[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = 'typescript'
+
+[[plugins]]
+repo = 'ObserverOfTime/scss.vim'
+on_ft = ['typescript', 'scss']
+
+[[plugins]]
 repo = 'Quramy/tsuquyomi'
 on_ft = 'typescript'
 
 [[plugins]]
+repo = 'peitalin/vim-jsx-typescript'
+on_ft = 'tsx'
+
+[[plugins]]
 repo = 'rcmdnk/vim-markdown'
 on_ft = 'md'
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+on_ft = ['html', 'vue']
 
 [[plugins]]
 repo = 'cespare/vim-toml'

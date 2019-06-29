@@ -35,6 +35,9 @@ repo = 'cohama/lexima.vim'
 on_i = 1
 
 [[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]

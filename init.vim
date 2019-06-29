@@ -171,6 +171,8 @@ set smarttab
 set shiftwidth=2
 set tabstop=2
 
+autocmd FileType go setlocal shiftwidth=4 tabstop=4 noexpandtab
+
 " Linebreak on 500 characters
 set lbr
 set tw=500
@@ -378,5 +380,3 @@ tnoremap <silent> fd <C-\><C-n>
 
 nnoremap <leader>q :q<cr>
 
-nnoremap <leader>gs :Gstatus<cr>
-nnoremap <leader>t :Tnew<cr>
